@@ -35,7 +35,11 @@
  */
 
 #import "XMLReader.h"
-#import <RestKit/Support/RKSerialization.h>
+#if TARGET_OS_IPHONE
+#import "RKSerialization.h"
+#else
+#import <RestKit/RKSerialization.h>
+#endif
 
 @interface RKXMLReaderSerialization : NSObject <RKSerialization>
 @end
