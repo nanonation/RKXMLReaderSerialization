@@ -35,10 +35,13 @@
  */
 
 #import "XMLReader.h"
-#if TARGET_OS_IPHONE
-#import "RKSerialization.h"
-#else
+
+#ifdef _RESTKIT_
 #import <RestKit/RKSerialization.h>
+#else
+// if you aren't using the RestKit framework (_RESTKIT_ is defined in the umbrella header),
+// then the following header must be found in your header search paths
+#import "RKSerialization.h"
 #endif
 
 @interface RKXMLReaderSerialization : NSObject <RKSerialization>
