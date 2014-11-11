@@ -34,8 +34,6 @@
  the parsed dictionary at the `@"text"` key.
  */
 
-#import "XMLReader.h"
-
 #ifdef _RESTKIT_
 #import <RestKit/RKSerialization.h>
 #else

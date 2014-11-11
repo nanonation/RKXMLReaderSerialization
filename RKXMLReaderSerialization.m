@@ -19,6 +19,7 @@
 //
 
 #import "RKXMLReaderSerialization.h"
+#import "XMLReader.h"
 
 @implementation RKXMLReaderSerialization
 
